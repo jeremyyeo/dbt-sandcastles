@@ -5,6 +5,13 @@ provider "google" {
   zone        = var.gcp_zone
 }
 
+provider "google-beta" {
+  project     = var.gcp_project
+  credentials = file(var.gcp_service_account_file)
+  region      = var.gcp_region
+  zone        = var.gcp_zone
+}
+
 module "gcp" {
   source      = "./gcp"
   gcp_project = var.gcp_project

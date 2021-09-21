@@ -22,6 +22,7 @@ Requirements:
 - A valid GCP project.
 - The following GCP APIs enabled:
   - BigQuery API.
+  - BigQuery Connection API.
   - Cloud SQL Admin API.
 - A service account and it's key (a `json` file) downloaded to your machine that has access to the above project.
 

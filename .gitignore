@@ -3,6 +3,7 @@ venv
 
 # Environment
 .env
+.credentials
 
 # Local .terraform directories
 **/.terraform/*
