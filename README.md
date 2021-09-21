@@ -53,6 +53,9 @@ terraform output  # To print some variables out such as the public ip address of
 Note that the PostgreSQL database will have some dummy data on it, see `terraform/scripts/database_setup.sql` for more information or to customize it yourself.
 
 Once you are done doing what you need to do, simply destroy everything with `terraform destroy`.
+There is a chance that terraform will fail to destroy the stack due to an inability to actually
+delete the `google_sql_user` resource, in this case, simply remove the user from the state file
+with `terraform state rm module.gcp.google_sql_user.root_user` before attempting to destroy again.
 
 ### dbt
 
