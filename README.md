@@ -3,11 +3,14 @@
 For testing [dbt](https://www.getdbt.com/) with various environments.
 
 ```
-dbt-sandcastles/
-├── terraform      # Terraform project to manage cloud resources.
-├── bigquery       # dbt project using BigQuery.
-├── redshift       # dbt project using Redshift.
-├── snowflake      # dbt project using Snowflake.
+.
+├── terraform/
+│   ├── aws        # For managing AWS resources.
+│   └── gcp        # For managing GCP resources.
+├── dbt/
+│   ├── bigquery   # dbt project using BigQuery.
+│   ├── redshift   # dbt project using Redshift.
+│   └── snowflake  # dbt project using Snowflake.
 └── ...
 ```
 
