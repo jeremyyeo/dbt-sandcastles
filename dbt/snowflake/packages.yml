@@ -1,0 +1,3 @@
+packages:
+  - package: catalogica/dbt_expectations
+    version: 0.3.7

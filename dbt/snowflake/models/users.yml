@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: users
+    description: Table of user data.
+    columns:
+      - name: user_id
+        description: The unique identifier of the user.
+        tests:
+          - unique
+          - not_null
+      - name: user_name
+        description: The name of the user.
+        tests:
+          - not_null
