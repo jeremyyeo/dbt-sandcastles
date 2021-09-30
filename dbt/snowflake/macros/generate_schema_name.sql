@@ -5,14 +5,14 @@
 
         {{ default_schema }}
     
-    {%- elif 'insights' in custom_schema_name and 'dev' in target.name -%}
+    {%- elif 'insights' in custom_schema_name and var('is_staging', none) is not none -%}
 
         {%- set custom_schema_name = default_schema ~ '_stage_' ~ custom_schema_name -%} 
         {{ custom_schema_name | trim }}
 
     {%- else -%}
 
-        {{ custom_schema_name | trim }}
+        {{ default_schema }}_{{ custom_schema_name | trim }}
 
     {%- endif -%}
 
