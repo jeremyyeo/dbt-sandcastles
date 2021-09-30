@@ -15,3 +15,5 @@ clean-targets:
 models:
   snowflake:
     +materialized: table
+    insights:
+      +schema: insights
