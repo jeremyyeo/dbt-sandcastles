@@ -1,0 +1,17 @@
+name: "redshift"
+version: "1.0.0"
+config-version: 2
+
+profile: "redshift"
+
+source-paths: ["models"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  redshift:
+    +materialized: table
