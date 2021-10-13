@@ -1,7 +1,4 @@
 
-SELECT *
-  FROM (VALUES ('12.3456', CONVERT_TIMEZONE('Pacific/Auckland', CURRENT_TIMESTAMP)),
-               ('123.456', CONVERT_TIMEZONE('Pacific/Auckland', CURRENT_TIMESTAMP)),
-               ('1234.56', CONVERT_TIMEZONE('Pacific/Auckland', CURRENT_TIMESTAMP))
-       ) 
-    AS my_table(financial_as_text, updated_at)
+SELECT '12.3456' AS financial_as_text UNION ALL 
+SELECT '123.456' UNION ALL 
+SELECT '1234.56'
