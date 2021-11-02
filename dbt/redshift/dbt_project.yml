@@ -14,4 +14,4 @@ clean-targets:
 
 models:
   redshift:
-    +materialized: table
+    +materialized: view
