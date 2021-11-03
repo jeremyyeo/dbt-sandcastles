@@ -1,3 +1,4 @@
-# packages:
-#   - package: calogica/dbt_expectations
-#     version: [">=0.4.0", "<0.5.0"]
+packages:
+  - git: "https://github.com/dbt-labs/dbt-labs-experimental-features.git"
+    subdirectory: "materialized-views"
+    revision: 0.0.1
