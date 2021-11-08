@@ -1,4 +1,0 @@
-packages:
-  - git: "https://github.com/dbt-labs/dbt-labs-experimental-features.git"
-    subdirectory: "materialized-views"
-    revision: 0.0.1
