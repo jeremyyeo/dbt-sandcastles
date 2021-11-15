@@ -1,0 +1,17 @@
+name: "databricks"
+version: "1.0.0"
+config-version: 2
+
+profile: "databricks"
+
+source-paths: ["models"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  databricks:
+    +materialized: table
