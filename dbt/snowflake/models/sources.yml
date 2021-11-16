@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: source
+    schema: dbt_jyeo
+    freshness:
+      warn_after: {count: 12, period: hour}
+      error_after: {count: 24, period: hour}
+    loaded_at_field: updated_at
+
+    tables:
+      - name: my_source
