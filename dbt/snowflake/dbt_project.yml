@@ -20,3 +20,5 @@ models:
       +database: development
     db_beta:
       +database: development
+    db_charlie:
+      +database: development
