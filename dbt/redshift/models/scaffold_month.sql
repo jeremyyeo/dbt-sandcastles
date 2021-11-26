@@ -8,6 +8,6 @@ WITH RECURSIVE scaffold(n) AS (
 
 SELECT DATEADD('month', n, '2018-01-01')::DATE AS "month"
 FROM scaffold
-WHERE "month" < ( SELECT DATEADD('year', 1, DATE_TRUNC('year', CURRENT_TIMESTAMP AT TIME ZONE 'America/Los_Angeles')) );
+WHERE "month" < ( SELECT DATEADD('year', 1, DATE_TRUNC('year', CURRENT_TIMESTAMP AT TIME ZONE 'America/Los_Angeles')) )
 
  -- return months through end of current year
