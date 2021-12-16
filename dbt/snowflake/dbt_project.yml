@@ -13,10 +13,6 @@ clean-targets:
   - "target"
   - "dbt_modules"
 
-vars:
-  division: ""
-
 models:
   snowflake:
     +materialized: table
-    +schema: "{{ 'dbt_jyeo' ~ var('division', '') }}"
