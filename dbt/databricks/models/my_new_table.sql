@@ -1,1 +1,1 @@
-select count(*) as num_customers from {{ ref('my_table') }}
+select *, 1 as NUM from {{ ref('my_table') }}
