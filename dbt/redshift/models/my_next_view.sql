@@ -2,4 +2,6 @@
     config(materialized="view")
 }}
 
-select * from analytics.my_view
+-- depends_on: {{ ref('my_view') }}
+
+select * from analytics.analytics.my_view
