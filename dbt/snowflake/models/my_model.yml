@@ -5,4 +5,4 @@ models:
     description: '{{ doc("model_desc") }}'
     columns:
       - name: user_id
-        description: The user id.
+        description: '{{ doc("col_desc") }}'
