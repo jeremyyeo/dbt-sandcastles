@@ -1,8 +1,0 @@
-version: 2
-
-models:
-  - name: my_model
-    description: '{{ doc("model_desc") }}'
-    columns:
-      - name: user_id
-        description: '{{ doc("col_desc") }}'
