@@ -1,0 +1,7 @@
+version: 2
+models:
+  - name: my_model
+    columns:
+      - name: user
+        tests:
+          - not_null
