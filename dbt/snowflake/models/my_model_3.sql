@@ -1,2 +1,1 @@
-
-select 1 as user
+select * from {{ ref('my_model') }}

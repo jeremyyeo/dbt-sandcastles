@@ -17,3 +17,7 @@ clean-targets:
 models:
   snowflake:
     +materialized: table
+  dbt_artifacts:
+    +schema: artifacts
+    staging:
+      +schema: stg_artifacts
