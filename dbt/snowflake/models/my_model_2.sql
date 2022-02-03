@@ -1,1 +1,1 @@
-select abc from {{ ref('my_model') }}
+select * from {{ ref('my_model') }}
