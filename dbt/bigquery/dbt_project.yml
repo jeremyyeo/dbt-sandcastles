@@ -4,13 +4,14 @@ config-version: 2
 
 profile: "bigquery"
 
-source-paths: ["models"]
+model-paths: ["models"]
 macro-paths: ["macros"]
 
 target-path: "target"
 clean-targets:
   - "target"
   - "dbt_modules"
+  - "dbt_packages"
 
 models:
   bigquery:
