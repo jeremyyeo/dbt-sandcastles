@@ -17,7 +17,6 @@ clean-targets:
 models:
   snowflake:
     +materialized: table
-  dbt_artifacts:
-    +schema: artifacts
-    staging:
-      +schema: stg_artifacts
+
+on-run-end:
+  - "{{ grant_select_on_schemas(schemas, 'reporter') }}"
