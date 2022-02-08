@@ -1,4 +1,2 @@
 
-SELECT '12.3456' AS financial_as_text UNION ALL 
-SELECT '123.456' UNION ALL 
-SELECT '1234.56'
+select 1 as user_id, 'alice' as user_name

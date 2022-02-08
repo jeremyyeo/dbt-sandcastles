@@ -1,17 +1,19 @@
-name: "redshift"
+name: "my_project"
 version: "1.0.0"
 config-version: 2
 
 profile: "redshift"
 
-source-paths: ["models"]
+model-paths: ["models"]
 macro-paths: ["macros"]
+seed-paths: ["data"]
 
 target-path: "target"
 clean-targets:
   - "target"
   - "dbt_modules"
+  - "dbt_packages"
 
 models:
-  redshift:
+  my_project:
     +materialized: table
