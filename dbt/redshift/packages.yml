@@ -1,3 +1,3 @@
 packages:
-  - package: dbt-labs/redshift
-    version: 0.6.0
+  - git: https://github.com/dbt-labs/redshift.git
+    revision: fix/maintenance-macro-with-ref
