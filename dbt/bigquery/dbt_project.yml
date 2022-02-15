@@ -4,7 +4,8 @@ config-version: 2
 
 profile: "bigquery"
 
-model-paths: ["models"]
+data-paths: ["seeds"]
+source-paths: ["models"]
 macro-paths: ["macros"]
 
 target-path: "target"
