@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: my_sources
-    database: "{{ var('source_db') }}"
-    schema: "{{ var('source_schema') }}"
-    tables:
-      - name: my_source

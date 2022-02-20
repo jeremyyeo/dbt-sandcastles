@@ -17,3 +17,6 @@ clean-targets:
 models:
   snowflake:
     +materialized: table
+
+on-run-end:
+  - "{{ log_results(results) }}"
