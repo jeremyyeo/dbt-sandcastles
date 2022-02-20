@@ -1,1 +1,1 @@
-select 1 as val
+select * from {{ source('my_sources', 'my_source') }}
