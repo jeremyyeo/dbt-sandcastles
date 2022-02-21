@@ -4,8 +4,8 @@ config-version: 2
 
 profile: "bigquery"
 
-data-paths: ["seeds"]
-source-paths: ["models"]
+seed-paths: ["seeds"]
+model-paths: ["models"]
 macro-paths: ["macros"]
 
 target-path: "target"
@@ -16,4 +16,9 @@ clean-targets:
 
 models:
   bigquery:
-    +materialized: table
+    +materialized: incremental
+    +incremental_strategy: insert_overwrite
+    +partition_by:
+      field: updated_at
+      data_type: timestamp
+      granularity: day
