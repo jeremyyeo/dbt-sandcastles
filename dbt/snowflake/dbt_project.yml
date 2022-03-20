@@ -1,4 +1,4 @@
-name: "snowflake"
+name: "my_dbt_project"
 version: "1.0.0"
 config-version: 2
 
@@ -15,8 +15,5 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  snowflake:
+  my_dbt_project:
     +materialized: table
-
-on-run-end:
-  - "{{ log_results(results) }}"
