@@ -16,4 +16,4 @@ clean-targets:
 
 models:
   my_dbt_project:
-    +materialized: view
+    +materialized: table
