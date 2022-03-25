@@ -14,7 +14,6 @@ clean-targets:
   - "dbt_modules"
   - "dbt_packages"
 
-# prettier-ignore
 models:
-  +materialized:table
-    my_dbt_project:
+  my_dbt_project:
+    +materialized: table
