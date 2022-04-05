@@ -4,7 +4,7 @@ config-version: 2
 
 profile: "databricks"
 
-source-paths: ["models"]
+model-paths: ["models"]
 macro-paths: ["macros"]
 
 target-path: "target"
