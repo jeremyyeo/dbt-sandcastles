@@ -1,7 +1,0 @@
-version: 2
-
-sources:
-  - name: sources
-    schema: jaffle_shop
-    tables:
-      - name: customers

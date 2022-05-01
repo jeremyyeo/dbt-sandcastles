@@ -4,7 +4,6 @@ config-version: 2
 
 profile: "databricks"
 
-source-paths: ["models"]
 macro-paths: ["macros"]
 
 target-path: "target"
@@ -14,4 +13,5 @@ clean-targets:
 
 models:
   databricks:
+    +file_format: delta
     +materialized: table
