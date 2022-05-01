@@ -4,6 +4,7 @@ config-version: 2
 
 profile: "databricks"
 
+
 macro-paths: ["macros"]
 
 target-path: "target"
