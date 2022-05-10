@@ -4,12 +4,12 @@ config-version: 2
 
 profile: "snowflake"
 
-model-paths: ["models"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
 target-path: "target"
 clean-targets:
+  - "logs"
   - "target"
   - "dbt_modules"
   - "dbt_packages"
@@ -17,3 +17,6 @@ clean-targets:
 models:
   my_dbt_project:
     +materialized: table
+
+quoting:
+  identifier: true
