@@ -1,6 +1,7 @@
 {{
     config(
-        materialized = 'incremental'
+        materialized = 'incremental',
+        schema = generate_schema_name('dbt_incremental')
     )
 }}
 
