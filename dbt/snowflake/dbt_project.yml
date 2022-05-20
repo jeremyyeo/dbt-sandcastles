@@ -4,9 +4,6 @@ config-version: 2
 
 profile: "snowflake"
 
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-
 target-path: "target"
 clean-targets:
   - "logs"
