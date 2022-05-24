@@ -1,1 +1,2 @@
-select 1 as user_id
+
+select system$wait(120) as time_waited
