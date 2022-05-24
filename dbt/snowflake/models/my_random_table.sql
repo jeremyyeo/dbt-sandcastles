@@ -1,2 +1,3 @@
 
-select system$wait(120) as time_waited
+select call system$wait(10) as time_waited
+--select 1 as user_id from x
