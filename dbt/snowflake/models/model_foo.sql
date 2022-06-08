@@ -1,2 +1,2 @@
 
-select 1 as val
+select 2 as val
