@@ -1,4 +1,4 @@
 {% macro my_macro() -%}
-  {%- set abc = 'original' -%}
+  {%- set abc = 'modified' -%}
   {{ abc }}
 {%- endmacro %}
