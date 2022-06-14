@@ -13,7 +13,6 @@ clean-targets:
 
 models:
   +materialized: view
-  +copy_grants: true
   my_dbt_project:
     staging:
       schema: stg
