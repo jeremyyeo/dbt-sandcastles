@@ -1,2 +1,2 @@
 
-select 1 as user_id
+select 'baz' as user_id
