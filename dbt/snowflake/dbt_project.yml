@@ -14,7 +14,8 @@ clean-targets:
 models:
   my_dbt_project:
     +materialized: table
-  dbt_artifacts:
-    +schema: dbt_artifacts
-    staging:
-      +schema: dbt_artifacts_staging
+    marts:
+      +schema: marts
+    transform:
+      +schema: transformations
+
