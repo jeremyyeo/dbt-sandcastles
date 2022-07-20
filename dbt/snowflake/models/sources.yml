@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: dbt_jyeo
+    tables:
+      - name: foo
+        columns:
+          - name: user_id
+            tests:
+              - unique
