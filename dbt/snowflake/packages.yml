@@ -1,0 +1,3 @@
+packages:
+  - git: "https://github.com/jeremyyeo/dbt-lots-of-files.git"
+    revision: "5mb-in-1-file"
