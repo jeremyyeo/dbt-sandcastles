@@ -1,3 +1,5 @@
+-- models/my_long_model.sql
+
 {{ config(materialized = 'table') }}
 
 {% call set_sql_header(config) -%}
@@ -6,7 +8,7 @@
     DECLARE WAIT STRING;
     SET retry_count = 1;
 
-    WHILE retry_count <= 120 DO
+    WHILE retry_count <= 60 DO
       SET retry_count = retry_count + 1;
       SET WAIT = 'TRUE';
       SET DELAY_TIME = DATETIME_ADD(CURRENT_DATETIME, INTERVAL 1 SECOND);
