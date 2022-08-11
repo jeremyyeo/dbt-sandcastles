@@ -5,4 +5,4 @@ profile: "snowflake"
 
 models:
   my_dbt_project:
-    +pre-hook: "call system$wait(60)"
+    +pre-hook: "call system$wait(30)"
