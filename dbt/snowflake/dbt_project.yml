@@ -1,16 +1,8 @@
 name: "my_dbt_project"
 version: "1.0.0"
 config-version: 2
-
 profile: "snowflake"
-
-target-path: "target"
-clean-targets:
-  - "logs"
-  - "target"
-  - "dbt_modules"
-  - "dbt_packages"
 
 models:
   my_dbt_project:
-    +materialized: view
+    +pre-hook: "call system$wait(60)"
