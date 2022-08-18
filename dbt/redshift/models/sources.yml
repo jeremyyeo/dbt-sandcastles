@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: my_other_database
+    schema: public
+    database: sources_only
+    tables:
+      - name: source_foo

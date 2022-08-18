@@ -1,3 +1,0 @@
-packages:
-  - git: https://github.com/dbt-labs/redshift.git
-    revision: fix/maintenance-macro-with-ref
