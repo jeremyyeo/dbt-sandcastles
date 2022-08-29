@@ -5,4 +5,5 @@ profile: "snowflake"
 
 models:
   my_dbt_project:
-    +pre-hook: "call system$wait(30)"
+    +materialized: table
+    +schema: analytics_jyeo
