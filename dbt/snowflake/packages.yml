@@ -1,0 +1,3 @@
+packages:
+  - git: "https://github.com/picturatechnica/top-secret-package.git"
+    revision: main
