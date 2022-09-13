@@ -1,18 +1,7 @@
 name: "bigquery"
 version: "1.0.0"
 config-version: 2
-
 profile: "bigquery"
-
-seed-paths: ["seeds"]
-model-paths: ["models"]
-macro-paths: ["macros"]
-
-target-path: "target"
-clean-targets:
-  - "target"
-  - "dbt_modules"
-  - "dbt_packages"
 
 models:
   bigquery:
