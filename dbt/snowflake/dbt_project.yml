@@ -6,3 +6,4 @@ profile: "snowflake"
 models:
   my_dbt_project:
     +materialized: table
+    +schema: analytics
