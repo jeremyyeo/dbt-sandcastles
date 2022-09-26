@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: foo
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+  - name: bar
+    columns:
+      - name: user_id
+        tests:
+          - not_null
