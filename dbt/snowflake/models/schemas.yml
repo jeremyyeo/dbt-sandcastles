@@ -2,12 +2,14 @@ version: 2
 
 models:
   - name: foo
+    description: Lorem ipsum      
     columns:
-      - name: user_id
+      - name: id
+        description: Foo foo
         tests:
           - not_null
   - name: bar
     columns:
-      - name: user_id
+      - name: id
         tests:
           - not_null

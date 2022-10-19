@@ -1,1 +1,1 @@
-select 1 as id
+select id * 2 as new_id from {{ ref('foo') }}
