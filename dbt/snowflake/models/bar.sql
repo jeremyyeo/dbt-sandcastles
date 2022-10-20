@@ -1,1 +1,1 @@
-select 2 as id
+select * from {{ ref('foo') }}
