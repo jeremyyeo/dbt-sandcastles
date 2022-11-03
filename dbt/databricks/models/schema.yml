@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: foo
+  - name: jyeo_foo
     columns:
       - name: id
         tests:
