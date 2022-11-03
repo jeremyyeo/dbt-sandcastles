@@ -2,7 +2,6 @@ version: 2
 models:
   - name: foo
     columns:
-      - name: user_id
+      - name: id
         tests:
           - not_null
-          - unique

@@ -13,8 +13,3 @@ clean-targets:
 models:
   my_dbt_project:
     +materialized: table
-    +file_format: delta
-
-tests:
-  +store_failures: true
-  +file_format: delta
