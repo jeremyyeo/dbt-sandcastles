@@ -1,6 +1,6 @@
 # dbt-sandcastles
 
-For testing [dbt](https://www.getdbt.com/) with various environments.
+For testing [dbt](https://www.getdbt.com/) with various environments...
 
 ```
 .
