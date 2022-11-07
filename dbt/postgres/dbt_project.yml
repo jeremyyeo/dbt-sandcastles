@@ -1,0 +1,8 @@
+name: "postgres"
+version: "1.0.0"
+config-version: 2
+profile: "postgres"
+
+models:
+  postgres:
+    +materialized: table
