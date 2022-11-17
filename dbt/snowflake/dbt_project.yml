@@ -6,4 +6,3 @@ profile: "snowflake"
 models:
   my_dbt_project:
     +materialized: table
-    +sql_header: "call system$wait(120, 'SECONDS');"
