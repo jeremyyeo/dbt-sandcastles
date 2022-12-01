@@ -1,2 +1,2 @@
 
-select 100 as n
+select 50 as n
