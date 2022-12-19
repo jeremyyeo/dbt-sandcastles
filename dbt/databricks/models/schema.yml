@@ -1,7 +1,0 @@
-version: 2
-models:
-  - name: jyeo_foo
-    columns:
-      - name: id
-        tests:
-          - not_null

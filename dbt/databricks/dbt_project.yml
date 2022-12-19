@@ -2,7 +2,7 @@ name: "my_dbt_project"
 version: "1.0.0"
 config-version: 2
 
-profile: "spark"
+profile: "databricks"
 
 target-path: "target"
 clean-targets:
@@ -13,3 +13,4 @@ clean-targets:
 models:
   my_dbt_project:
     +materialized: table
+    # +file_format: delta
