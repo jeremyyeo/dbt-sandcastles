@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: orders
+    columns:
+      - name: id
+        description: Lorem ipsum
+      - name: amount
+        description: Lorem ipsum
+      - name: ts
+        description: Lorem ipsum
+
+metrics:
+  - name: sales
+    label: Sales
+    model: ref('orders')
+    description: Lorem ipsum metric.
+    calculation_method: sum
+    expression: num
+    timestamp: ts
+    time_grains: [day, month, year]
