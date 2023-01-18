@@ -15,6 +15,6 @@ metrics:
     model: ref('orders')
     description: Lorem ipsum metric.
     calculation_method: sum
-    expression: num
+    expression: amount
     timestamp: ts
     time_grains: [day, month, year]
