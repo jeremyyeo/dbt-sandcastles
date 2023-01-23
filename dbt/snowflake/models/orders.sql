@@ -1,5 +1,5 @@
 
-select 1 as id, 1 as amount, '2000-01-01'::date as ts
+select 1 as id, 2 as amount, '2000-01-01'::date as ts
 union
 select 2 as id, 2 as amount, '2000-01-01'::date as ts
 union
