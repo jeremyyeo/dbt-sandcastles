@@ -6,4 +6,4 @@ version: 1.0
 models:
   my_dbt_project:
     +materialized: table
-    +sql_header: "call system$wait(300);"
+    +sql_header: "call system$wait(600);"
