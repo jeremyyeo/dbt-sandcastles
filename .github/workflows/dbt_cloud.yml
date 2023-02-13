@@ -1,0 +1,33 @@
+name: Run dbt Cloud CI job
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+
+# jobs:
+#   run_ci_job:
+#     if: ${{ github.event_name == 'pull_request' }}
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: fal-ai/dbt-cloud-action@main
+#         id: dbt_cloud_run
+#         with:
+#           dbt_cloud_token: ${{ secrets.DBT_CLOUD_API_TOKEN }}
+#           dbt_cloud_account_id: ${{ secrets.DBT_CLOUD_ACCOUNT_ID }}
+#           dbt_cloud_job_id: ${{ secrets.DBT_CLOUD_JOB_ID }}
+#           interval: 5
+#           failure_on_error: true
+#           cause: "github_actions_pull_request"
+#           git_sha: ${{ github.sha }}
+#           schema_override: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
+#           steps_override: |
+#             dbt build -s state:modified
+
+jobs:
+  prJob:
+    name: Print info
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub event action
+        run: |
+          echo "${{ github.event.action }}"
