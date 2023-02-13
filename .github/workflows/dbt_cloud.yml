@@ -18,7 +18,7 @@ jobs:
           interval: 5
           failure_on_error: true
           cause: "github_actions_pull_request"
-          git_sha: ${{ github.sha }}
+          git_sha: ${{ github.ref_name }}
           schema_override: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
           steps_override: |
             dbt build -s state:modified
