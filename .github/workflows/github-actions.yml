@@ -1,3 +1,4 @@
+name: Print GitHub Action debug info
 on:
   pull_request:
     types: [opened, closed, reopened]

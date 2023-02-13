@@ -5,10 +5,12 @@ on:
 
 jobs:
   run_ci_job:
+    # Only when PR is opened or new commits added.
     if: ${{ github.event_name == 'pull_request' && contains(fromJSON('["opened", "synchronize"]'), github.event.action) }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # Use fal's dbt Cloud GitHub Action.
       - uses: fal-ai/dbt-cloud-action@main
         id: dbt_cloud_run
         with:
@@ -18,7 +20,7 @@ jobs:
           interval: 5
           failure_on_error: true
           cause: "github_actions_pull_request"
-          # git_sha: ${{ github.head_ref }}
+          # The commit sha we want to checkout - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
           git_sha: ${{ github.event.pull_request.head.sha }}
           schema_override: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
           steps_override: |
