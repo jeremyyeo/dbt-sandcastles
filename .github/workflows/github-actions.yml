@@ -1,10 +1,10 @@
 name: Print GitHub Action debug info
 on:
   pull_request:
-    types: [opened, closed, reopened]
+    types: [opened, synchronize, closed, reopened]
 
 jobs:
-  prJob:
+  pr_job:
     name: Print info
     runs-on: ubuntu-latest
     steps:
