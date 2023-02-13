@@ -10,3 +10,4 @@ jobs:
       - name: Print GitHub event action
         run: |
           echo "${{ github.event.action }}"
+          echo "${{ github.event_name }}"
