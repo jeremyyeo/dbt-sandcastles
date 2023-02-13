@@ -1,4 +1,4 @@
-name: Run dbt Cloud CI job
+name: Run dbt Cloud jobs
 on:
   pull_request:
     types: [opened, synchronize, closed]
@@ -26,3 +26,21 @@ jobs:
           schema_override: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
           steps_override: |
             dbt build -s state:modified
+  run_dbt_cloud_drop_pr_schema:
+    # Only when PR is closed/merged.
+    if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: fal-ai/dbt-cloud-action@main
+        id: drop_ci_schema
+        with:
+          dbt_cloud_token: ${{ secrets.DBT_CLOUD_API_TOKEN }}
+          dbt_cloud_account_id: ${{ secrets.DBT_CLOUD_ACCOUNT_ID }}
+          dbt_cloud_job_id: ${{ secrets.DBT_CLOUD_JOB_ID }}
+          interval: 5
+          cause: "github_actions_pull_request"
+          git_sha: ${{ github.event.pull_request.head.sha }}
+          schema_override: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
+          steps_override: |
+            dbt run-operation drop_pr_schema
