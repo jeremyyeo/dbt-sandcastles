@@ -1,1 +1,1 @@
-select 123 as id
+select 1 as id
