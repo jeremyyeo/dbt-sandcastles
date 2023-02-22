@@ -13,4 +13,6 @@ clean-targets:
 models:
   my_dbt_project:
     +materialized: table
+    bravo:
+      +schema: doesnt_exist_or_unauthorized
     # +file_format: delta
