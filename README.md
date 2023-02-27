@@ -1,4 +1,4 @@
-# dbt-sandcastles
+# dbt-sandcastless
 
 For testing [dbt](https://www.getdbt.com/) with various environments...
 
