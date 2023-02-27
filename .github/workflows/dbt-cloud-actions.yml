@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_CONTEXT: ${{ toJson(github) }}
-    run: echo "$GH_CONTEXT"
+    steps:
+      - name: Print context
+        run: echo "$GH_CONTEXT"
     # env:
     #   DBT_CLOUD_TOKEN: ${{ secrets.DBT_CLOUD_API_TOKEN }}
     #   DBT_CLOUD_ACCOUNT_ID: ${{ secrets.DBT_CLOUD_ACCOUNT_ID }}
