@@ -8,21 +8,16 @@ jobs:
     if: ${{ github.event_name == 'pull_request' && contains(fromJSON('["opened", "synchronize"]'), github.event.action) }}
     runs-on: ubuntu-latest
     env:
-      GH_CONTEXT: ${{ toJson(github) }}
+      DBT_CLOUD_API_TOKEN: ${{ secrets.DBT_CLOUD_API_TOKEN }}
+      DBT_CLOUD_ACCOUNT_ID: ${{ secrets.DBT_CLOUD_ACCOUNT_ID }}
+      DBT_CLOUD_PROJECT_ID: ${{ secrets.DBT_CLOUD_PROJECT_ID }}
+      DBT_CLOUD_JOB_ID: ${{ secrets.DBT_CLOUD_JOB_ID }}
+      DBT_CLOUD_JOB_BRANCH: ${{ github.head_ref }}
+      DBT_CLOUD_JOB_SCHEMA_OVERRIDE: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
     steps:
-      - name: Print context
-        run: echo "$GH_CONTEXT"
-    # env:
-    #   DBT_CLOUD_TOKEN: ${{ secrets.DBT_CLOUD_API_TOKEN }}
-    #   DBT_CLOUD_ACCOUNT_ID: ${{ secrets.DBT_CLOUD_ACCOUNT_ID }}
-    #   DBT_CLOUD_PROJECT_ID: ${{ secrets.DBT_CLOUD_PROJECT_ID }}
-    #   DBT_CLOUD_JOB_ID: ${{ secrets.DBT_CLOUD_JOB_ID }}
-    #   DBT_CLOUD_JOB_BRANCH: ${{ github.event.pull_request.head.sha }}
-    #   DBT_CLOUD_JOB_SCHEMA_OVERRIDE: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
-    # steps:
-    #   - uses: actions/checkout@v3
-    #   - uses: actions/setup-python@v2
-    #     with:
-    #       python-version: "3.9"
-    #   - name: Run dbt Cloud job
-    #     run: "python python/dbt_cloud.py -s 'dbt run -s state:modified'"
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - name: Run dbt Cloud job
+        run: "python python/dbt_cloud.py -s 'dbt run -s state:modified'"
