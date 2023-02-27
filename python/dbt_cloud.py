@@ -96,7 +96,14 @@ def main():
     run_id: int = None
 
     try:
-        run_id = run_dbt_cloud_job(req_job_url, req_auth_header, job_cause, job_steps)
+        run_id = run_dbt_cloud_job(
+            url=req_job_url,
+            headers=req_auth_header,
+            cause=job_cause,
+            branch=git_branch,
+            schema_override=schema_override,
+            steps=job_steps,
+        )
     except Exception as e:
         print(f"ERROR! - Could not trigger dbt Cloud job:\n{e}")
         raise
