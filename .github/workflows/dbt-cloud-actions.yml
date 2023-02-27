@@ -26,6 +26,8 @@ jobs:
   drop_pr_schema:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
     runs-on: ubuntu-latest
+    env:
+      DBT_CLOUD_JOB_SCHEMA_OVERRIDE: "dbt_cloud_pr_${{ secrets.DBT_CLOUD_JOB_ID }}_${{ github.event.number }}"
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
