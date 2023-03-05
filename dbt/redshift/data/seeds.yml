@@ -1,0 +1,14 @@
+version: 2
+
+seeds:
+  - name: mappings
+    description: A mapping table
+    columns:
+      - name: code
+        tests:
+          - unique
+          - not_null
+      - name: name
+        tests:
+          - unique
+          - not_null

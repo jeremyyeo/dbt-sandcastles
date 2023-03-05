@@ -17,3 +17,7 @@ clean-targets:
 models:
   my_project:
     +materialized: table
+
+seeds:
+  quote_columns: false
+  schema: analytics
