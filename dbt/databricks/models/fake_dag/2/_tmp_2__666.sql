@@ -1,0 +1,7 @@
+select * from {{ ref('_tmp_1__1332') }} 
+  union all 
+select * from {{ ref('_tmp_1__1333') }} 
+  union all 
+select * from {{ ref('_tmp_0__1816') }} 
+  union all 
+select 1 as dummmy_column_1 
