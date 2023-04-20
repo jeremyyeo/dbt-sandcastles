@@ -13,6 +13,8 @@ clean-targets:
 models:
   my_dbt_project:
     +materialized: table
+    +post-hook:
+      - "optimize {{ this }}"
     bravo:
       +schema: doesnt_exist_or_unauthorized
     # +file_format: delta
