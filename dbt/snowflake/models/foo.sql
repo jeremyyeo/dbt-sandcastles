@@ -1,1 +1,1 @@
-select '{{ local_pkg.shared_value() }}' as id
+select 1 as id
