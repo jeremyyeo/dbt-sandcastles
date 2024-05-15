@@ -1,1 +1,1 @@
-SELECT 1 AS not_id
+SELECT 1 AS not_ids
