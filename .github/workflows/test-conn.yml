@@ -1,0 +1,7 @@
+jobs:
+  test-conn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test connection
+        run: |
+          curl https://cloud.getdbt.com
